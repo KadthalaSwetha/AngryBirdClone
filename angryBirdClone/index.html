@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angry Birds Clone - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+      overflow: hidden;
+    }
+    
+    .home-container {
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/background-image.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+    
+    .content {
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      max-width: 800px;
+    }
+    
+    .game-title {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+    
+    .game-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .play-button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .play-button:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+    
+    .play-button:active {
+      transform: scale(0.98);
+    }
+    
+    .birds-container {
+      position: absolute;
+      bottom: 10%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      z-index: 2;
+    }
+    
+    .bird {
+      width: 80px;
+      height: 80px;
+      margin: 0 15px;
+      animation: bounce 2s infinite alternate;
+    }
+    
+    .bird:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    
+    .bird:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    
+    
+    @media (max-width: 768px) {
+      .game-title {
+        font-size: 3rem;
+      }
+      
+      .game-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .play-button {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+      }
+      
+      .bird {
+        width: 60px;
+        height: 60px;
+        margin: 0 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .game-title {
+        font-size: 2.5rem;
+      }
+      
+      .game-subtitle {
+        font-size: 1rem;
+      }
+      
+      .bird {
+        width: 50px;
+        height: 50px;
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="home-container">
+    <div class="overlay"></div>
+    
+    <div class="content">
+      <h1 class="game-title" style="color:rgb(171, 63, 248);">ANGRY BIRDS</h1>
+      <p class="game-subtitle">Aim , Launch & Destroy</p>
+      <button class="play-button" onclick="window.location.href='game.html'">Play Now</button>
+    
+</body>
+</html>
